@@ -5,20 +5,21 @@
 
 import 'dart:math' as math;
 
-import 'package:flutter/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/rendering.dart';
-
 import 'package:flutter/material.dart'
     show
+        Divider,
         ListTileTheme,
         MaterialState,
         MaterialStateMouseCursor,
         MaterialStateProperty;
-export 'package:flutter/material.dart' show ListTileTheme;
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 import 'list_tile_background.dart';
+
+export 'package:flutter/material.dart' show ListTileTheme;
 
 /// A single fixed-height row that typically contains some text as well as
 /// a leading or trailing icon.
@@ -227,17 +228,7 @@ class CupertinoListTile extends StatelessWidget {
 
     Widget separator;
     if (border == null) {
-      separator = Container(
-        height: 1,
-        decoration: BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              color: CupertinoDynamicColor.resolve(
-                  CupertinoColors.separator, context),
-            ),
-          ),
-        ),
-      );
+      separator = Divider();
     }
 
     return ListTileBackground(
