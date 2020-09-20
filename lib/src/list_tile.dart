@@ -246,7 +246,7 @@ class CupertinoListTile extends StatelessWidget {
           bottom: false,
           minimum: resolvedContentPadding,
           child: _ListTile(
-            separator: separator,
+//            separator: separator,
             leading: leadingIcon,
             title: titleText,
             subtitle: subtitleText,
